@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Response</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .yes-button {
+            background-color: #4CAF50; /* Green */
+        }
+        .no-button {
+            background-color: #f44336; /* Red */
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Do you want to proceed?</h1>
+        <button class="yes-button" onclick="handleResponse('Yes')">Yes</button>
+        <button class="no-button" onclick="handleResponse('No')">No</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function handleResponse(response) {
+            document.getElementById('result').textContent = `You selected: ${response}`;
+            // Here you can also send the response to a server if needed
+        }
+    </script>
+</body>
+</html>
